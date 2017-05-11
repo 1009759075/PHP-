@@ -8,6 +8,4 @@ return array(
     'DB_PWD'                =>  'dbapi123',        // 密码
     'DB_PORT'               =>  '3306',        		// 端口
     'DB_PREFIX'             =>  'db_',    			// 数据库表前缀
-
-    'SHOW_ERROR_MSG'        =>  false,
 );

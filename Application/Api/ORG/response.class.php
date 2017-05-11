@@ -1,6 +1,6 @@
 <?php
 /**
- * API输出类
+ * API输出类(2017.5.11废弃)
  */
 
 namespace Api\ORG;
@@ -36,7 +36,7 @@ class response
             'code' => $code ,
             'msg'  => $msg,
         );
-        header('Content-Type:application/json; charset=utf-8');
+        header('Content-Type:text/json; charset=utf-8');
         exit(json_encode($returnData));
     }
 
@@ -46,7 +46,8 @@ class response
      */
     public static function success( $data )
     {
-        header('Content-Type:application/json; charset=utf-8');
-        exit(json_encode($data));
+
+	   header('Content-Type:text/json; charset=utf-8');
+       exit(json_encode($data));
     }
 }

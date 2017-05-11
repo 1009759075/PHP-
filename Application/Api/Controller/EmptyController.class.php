@@ -8,14 +8,12 @@
 
 namespace Api\Controller;
 
-use Api\ORG\response;
-
 class EmptyController extends baseController
 {
     /**
      * 空控制器处理
      */
     public function index(){
-        response::error(response::Empty_Controller , '非法请求');
+        error(baseController::Empty_Controller , '非法请求');
     }
 }

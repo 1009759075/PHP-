@@ -7,7 +7,6 @@
  */
 namespace Api\Controller;
 
-use Api\ORG\response;
 
 class MovieController extends baseController
 {
@@ -35,12 +34,11 @@ class MovieController extends baseController
         if($count < 250){
             $count = 250;
         }
-
         $list = $this->movieModel->where($this->deal_where())->limit($start , $start+$count)->select();
         if(empty($list)){
-            response::error(response::NOT_EXISTS,'没有相关数据');
+            error(baseController::NOT_EXISTS,'没有相关数据');
         }
-        response::success($list);
+        success($list);
 
     }
 
@@ -52,14 +50,14 @@ class MovieController extends baseController
     {
         $id = I('get.id',0,'intval');
         if(!$id){
-            response::error(response::Miss_Arguments,'电影没找到');
+            error(baseController::Miss_Arguments,'电影没找到');
         }
         $info = $this->movieModel->where($this->deal_where(array("id"=>$id)))->find();
 
         if(!$info){
-            response::error(response::NOT_EXISTS,'电影没找到');
+            error(baseController::NOT_EXISTS,'电影没找到');
         }
-        response::success($info);
+        success($info);
     }
 
 
