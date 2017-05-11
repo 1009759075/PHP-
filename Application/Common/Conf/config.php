@@ -8,4 +8,8 @@ return array(
     'DB_PWD'                =>  'dbapi123',        // 密码
     'DB_PORT'               =>  '3306',        		// 端口
     'DB_PREFIX'             =>  'db_',    			// 数据库表前缀
+    
+    'MODULE_ALLOW_LIST' => array('Api'),//可访问模块
+//    'MULTI_MODULE'          =>  false,  // 关闭多模块访问
+    'DEFAULT_MODULE'        =>  'Api',  //  默认模块
 );
