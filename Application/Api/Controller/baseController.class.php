@@ -25,11 +25,11 @@ class baseController extends Controller
     /* 权限不足、非法访问 */
     const Invalid_Permission = 25;
 
-    /* 空控制器 */
-    const Empty_Controller = 97;
+    /* 空控制器、不存在的控制器 */
+    const Invalid_Controller = 97;
 
-    /* 空操作 */
-    const Empty_Method = 98;
+    /* 空操作、不存在的方法名 */
+    const Invalid_Method = 98;
 
     public $where = array();
 
@@ -50,6 +50,6 @@ class baseController extends Controller
      * @param $name
      */
     public function _empty($name){
-        error(baseController::Empty_Method,'非法请求');
+        error(baseController::Invalid_Method,'非法请求');
     }
 }

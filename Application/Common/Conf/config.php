@@ -12,4 +12,6 @@ return array(
     'MODULE_ALLOW_LIST' => array('Api'),//可访问模块
 //    'MULTI_MODULE'          =>  false,  // 关闭多模块访问
     'DEFAULT_MODULE'        =>  'Api',  //  默认模块
+
+    'LIMIT_PROXY_VISIT' => false
 );

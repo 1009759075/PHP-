@@ -14,6 +14,6 @@ class EmptyController extends baseController
      * 空控制器处理
      */
     public function index(){
-        error(baseController::Empty_Controller , '非法请求');
+        error(baseController::Invalid_Controller , '非法请求');
     }
 }
