@@ -24,8 +24,8 @@ class CommentModel extends BaseModel{
             $res=$this->Model_error_return(1002,'','需要的medium_id为空');
             return $res;
         }
-        if(empty($option['tab'])){
-            $res=$this->Model_error_return(1002,'','需要的tab为空');
+        if(empty($option['types'])){
+            $res=$this->Model_error_return(1002,'','需要的types为空');
             return $res;
         }
 
@@ -34,7 +34,8 @@ class CommentModel extends BaseModel{
         }
         //条件 媒介ID
         $comment_map['a.belong_id']=$option['medium_id'];
-        $comment_map['a.tab']=$option['tab'];
+//    $comment_map['a.types']    类型 1.电影 2.读书 3.电视 4.音乐 5.广播
+        $comment_map['a.types']=$option['types'];
        // $comment_map['b.pid']=0;//表示这是一级评论
         $count=M('link_comment a')
             ->join('db_user u ON a.user_id=u.id','left')

@@ -19,7 +19,7 @@ class CommentController extends baseController{
     public function get_comment(){
         $option='';
         $option['medium_id']=I('get.medium_id');
-        $option['tab']=I('get.tab');
+        $option['types']=I('get.types');
         $option['page']=I('get.page',1);
         $res=$this->commentModel->get_level1_comment($option);
         if($res['code']<>1){
