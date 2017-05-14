@@ -17,7 +17,7 @@ class CommentController extends baseController{
 
     }
     public function get_comment(){
-        $option='';
+        $option=array();    //声明接收的参数为数组格式
         $option['medium_id']=I('get.medium_id');
         $option['types']=I('get.types');
         $option['page']=I('get.page',1);
